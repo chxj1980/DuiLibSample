@@ -21,9 +21,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="App.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="CDwm.cpp">
       <Filter>源文件\class</Filter>
     </ClCompile>
@@ -32,6 +29,9 @@
     </ClCompile>
     <ClCompile Include="CDPI.cpp">
       <Filter>源文件\class</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

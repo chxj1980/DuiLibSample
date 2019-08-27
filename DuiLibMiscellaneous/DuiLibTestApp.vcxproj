@@ -133,7 +133,7 @@ xcopy $(ProjectDir)_SRC\* /Y /V /E $(TargetDir)$(TargetName)</Command>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="App.cpp" />
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="CDPI.cpp" />
     <ClCompile Include="CDwm.cpp" />
     <ClCompile Include="CFrameWindowWnd.cpp" />
