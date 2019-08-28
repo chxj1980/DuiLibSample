@@ -27,9 +27,21 @@
     <ClCompile Include="C360SafeFrameWnd.cpp">
       <Filter>源文件\class</Filter>
     </ClCompile>
+    <ClCompile Include="CDialogBuilderCallbackEx.cpp">
+      <Filter>源文件\class</Filter>
+    </ClCompile>
+    <ClCompile Include="ComputerExamineUI.cpp">
+      <Filter>源文件\class</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="C360SafeFrameWnd.h">
+      <Filter>头文件\class</Filter>
+    </ClInclude>
+    <ClInclude Include="CDialogBuilderCallbackEx.h">
+      <Filter>头文件\class</Filter>
+    </ClInclude>
+    <ClInclude Include="ComputerExamineUI.h">
       <Filter>头文件\class</Filter>
     </ClInclude>
   </ItemGroup>
