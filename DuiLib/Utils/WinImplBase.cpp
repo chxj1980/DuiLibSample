@@ -1,4 +1,7 @@
-#include "../StdDui.h"
+//#ifndef WIN_IMPL_BASE_HPP
+//#define WIN_IMPL_BASE_HPP
+
+#include "../StdAfx.h"//#include "stdafx.h"
 
 namespace DuiLib
 {
@@ -161,9 +164,9 @@ LRESULT WindowImplBase::OnNcHitTest(UINT uMsg, WPARAM wParam, LPARAM lParam, BOO
 	if( pt.x >= rcClient.left + rcCaption.left && pt.x < rcClient.right - rcCaption.right \
 		&& pt.y >= rcCaption.top && pt.y < rcCaption.bottom ) {
 			CControlUI* pControl = static_cast<CControlUI*>(m_PaintManager.FindControl(pt));
-			if( pControl && _tcsicmp(pControl->GetClass(), DUI_CTR_BUTTON) != 0 && 
-				_tcsicmp(pControl->GetClass(), DUI_CTR_OPTION) != 0 &&
-				_tcsicmp(pControl->GetClass(), DUI_CTR_TEXT) != 0 )
+			if( pControl && _tcsicmp(pControl->GetClass(), _T("ButtonUI")) != 0 && 
+				_tcsicmp(pControl->GetClass(), _T("OptionUI")) != 0 &&
+				_tcsicmp(pControl->GetClass(), _T("TextUI")) != 0 )
 				return HTCAPTION;
 	}
 
@@ -245,15 +248,6 @@ LRESULT WindowImplBase::OnSysCommand(UINT uMsg, WPARAM wParam, LPARAM lParam, BO
 	LRESULT lRes = CWindowWnd::HandleMessage(uMsg, wParam, lParam);
 	if( ::IsZoomed(*this) != bZoomed )
 	{
-        CControlUI* pbtnMax = static_cast<CControlUI*>(m_PaintManager.FindControl(_T("maxbtn")));         // max button
-        CControlUI* pbtnRestore = static_cast<CControlUI*>(m_PaintManager.FindControl(_T("restorebtn"))); // restore button
-
-        // toggle status of max and restore button
-        if (pbtnMax && pbtnRestore)
-        {
-            pbtnMax->SetVisible(TRUE == bZoomed);
-            pbtnRestore->SetVisible(FALSE == bZoomed);
-        }
 	}
 #else
 	LRESULT lRes = CWindowWnd::HandleMessage(uMsg, wParam, lParam);
@@ -275,12 +269,8 @@ LRESULT WindowImplBase::OnCreate(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& 
 	m_PaintManager.AddPreMessageFilter(this);
 
 	CDialogBuilder builder;
-	CDuiString strResourcePath=m_PaintManager.GetResourcePath();
-	if (strResourcePath.IsEmpty())
-	{
-		strResourcePath=m_PaintManager.GetInstancePath();
-		strResourcePath+=GetSkinFolder().GetData();
-	}
+	CDuiString strResourcePath=m_PaintManager.GetInstancePath();
+	strResourcePath+=GetSkinFolder().GetData();
 	m_PaintManager.SetResourcePath(strResourcePath.GetData());
 
 	switch(GetResourceType())
@@ -335,6 +325,7 @@ LRESULT WindowImplBase::OnCreate(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& 
 	}
 	m_PaintManager.AttachDialog(pRoot);
 	m_PaintManager.AddNotifier(this);
+	m_PaintManager.SetBackgroundTransparent(TRUE);
 
 	InitWindow();
 	return 0;
@@ -461,3 +452,5 @@ void WindowImplBase::Notify(TNotifyUI& msg)
 }
 
 }
+
+//#endif

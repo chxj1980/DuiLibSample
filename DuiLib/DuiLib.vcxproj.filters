@@ -14,28 +14,28 @@
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
     <Filter Include="头文件\Control">
-      <UniqueIdentifier>{9b33c426-be20-4f63-a0a7-a76b0c566904}</UniqueIdentifier>
+      <UniqueIdentifier>{e8d8196f-2278-4824-bd4d-fc5cac9e20bc}</UniqueIdentifier>
     </Filter>
     <Filter Include="头文件\Core">
-      <UniqueIdentifier>{8ca43f8f-554f-4073-b1f7-0c8352abb62a}</UniqueIdentifier>
+      <UniqueIdentifier>{cd5f9570-c91d-42f7-ba27-2c99d1a7d7ef}</UniqueIdentifier>
     </Filter>
     <Filter Include="头文件\Layout">
-      <UniqueIdentifier>{70a6bf1d-8738-4a0c-8c6a-bd0cf35c29bb}</UniqueIdentifier>
+      <UniqueIdentifier>{26a743dd-940e-4b56-b449-411cc7c07eee}</UniqueIdentifier>
     </Filter>
     <Filter Include="头文件\Utils">
-      <UniqueIdentifier>{f534a007-23ff-4517-b8e3-e33f26e541c4}</UniqueIdentifier>
+      <UniqueIdentifier>{7fdf1409-cf39-4abb-b71e-f82ec7371149}</UniqueIdentifier>
     </Filter>
     <Filter Include="源文件\Control">
-      <UniqueIdentifier>{166119a8-52ff-4b86-82bc-13b236268581}</UniqueIdentifier>
+      <UniqueIdentifier>{051f7eff-01da-46cc-bd9f-4c41d8b2fe4a}</UniqueIdentifier>
     </Filter>
     <Filter Include="源文件\Core">
-      <UniqueIdentifier>{a3089e47-eae3-43b8-86af-bd2885c3d635}</UniqueIdentifier>
+      <UniqueIdentifier>{93141eb8-11b1-4c37-92ab-31d87903d45a}</UniqueIdentifier>
     </Filter>
     <Filter Include="源文件\Layout">
-      <UniqueIdentifier>{f4fc1dd6-cd30-4c31-b894-f2a486399cd0}</UniqueIdentifier>
+      <UniqueIdentifier>{da914f75-0699-4d99-a280-8bdf8a2da141}</UniqueIdentifier>
     </Filter>
     <Filter Include="源文件\Utils">
-      <UniqueIdentifier>{9b179d0d-a568-48f6-ad19-ba3df24c1be9}</UniqueIdentifier>
+      <UniqueIdentifier>{86e267d5-db63-4f7f-90d2-e85f786de556}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -51,16 +51,13 @@
     <ClInclude Include="Control\UICombo.h">
       <Filter>头文件\Control</Filter>
     </ClInclude>
+    <ClInclude Include="Control\UIComboBox.h">
+      <Filter>头文件\Control</Filter>
+    </ClInclude>
     <ClInclude Include="Control\UIDateTime.h">
       <Filter>头文件\Control</Filter>
     </ClInclude>
     <ClInclude Include="Control\UIEdit.h">
-      <Filter>头文件\Control</Filter>
-    </ClInclude>
-    <ClInclude Include="Control\UIFlash.h">
-      <Filter>头文件\Control</Filter>
-    </ClInclude>
-    <ClInclude Include="Control\UIGifAnim.h">
       <Filter>头文件\Control</Filter>
     </ClInclude>
     <ClInclude Include="Control\UILabel.h">
@@ -138,9 +135,6 @@
     <ClInclude Include="Utils\FlashEventHandler.h">
       <Filter>头文件\Utils</Filter>
     </ClInclude>
-    <ClInclude Include="Utils\stb_image.h">
-      <Filter>头文件\Utils</Filter>
-    </ClInclude>
     <ClInclude Include="Utils\UIDelegate.h">
       <Filter>头文件\Utils</Filter>
     </ClInclude>
@@ -153,13 +147,10 @@
     <ClInclude Include="Utils\WinImplBase.h">
       <Filter>头文件\Utils</Filter>
     </ClInclude>
-    <ClInclude Include="Utils\WndShadow.h">
-      <Filter>头文件\Utils</Filter>
-    </ClInclude>
-    <ClInclude Include="UIlib.h">
+    <ClInclude Include="StdAfx.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="StdDui.h">
+    <ClInclude Include="UIlib.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -176,16 +167,13 @@
     <ClCompile Include="Control\UICombo.cpp">
       <Filter>源文件\Control</Filter>
     </ClCompile>
+    <ClCompile Include="Control\UIComboBox.cpp">
+      <Filter>源文件\Control</Filter>
+    </ClCompile>
     <ClCompile Include="Control\UIDateTime.cpp">
       <Filter>源文件\Control</Filter>
     </ClCompile>
     <ClCompile Include="Control\UIEdit.cpp">
-      <Filter>源文件\Control</Filter>
-    </ClCompile>
-    <ClCompile Include="Control\UIFlash.cpp">
-      <Filter>源文件\Control</Filter>
-    </ClCompile>
-    <ClCompile Include="Control\UIGifAnim.cpp">
       <Filter>源文件\Control</Filter>
     </ClCompile>
     <ClCompile Include="Control\UILabel.cpp">
@@ -263,20 +251,17 @@
     <ClCompile Include="Utils\Utils.cpp">
       <Filter>源文件\Utils</Filter>
     </ClCompile>
-    <ClCompile Include="Utils\WinImplBase.cpp">
-      <Filter>源文件\Utils</Filter>
-    </ClCompile>
-    <ClCompile Include="Utils\WndShadow.cpp">
-      <Filter>源文件\Utils</Filter>
-    </ClCompile>
     <ClCompile Include="Utils\XUnzip.cpp">
       <Filter>源文件\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="StdAfx.cpp">
+      <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="UIlib.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="StdDui.cpp">
-      <Filter>源文件</Filter>
+    <ClCompile Include="Utils\WinImplBase.cpp">
+      <Filter>源文件\Utils</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -11,7 +11,7 @@
 
 namespace DuiLib
 {
-	class DUILIB_API CFlashUI
+	class UILIB_API CFlashUI
 		: public CActiveXUI
 		, public _IShockwaveFlashEvents
 		, public ITranslateAccelerator

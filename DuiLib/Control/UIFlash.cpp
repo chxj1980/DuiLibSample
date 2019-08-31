@@ -1,4 +1,4 @@
-#include "../StdDui.h"
+#include "stdafx.h"
 #include "UIFlash.h"
 #include <atlcomcli.h>
 

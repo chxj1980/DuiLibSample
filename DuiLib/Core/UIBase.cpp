@@ -1,4 +1,4 @@
-#include "../StdDui.h"
+#include "../StdAfx.h"//#include "StdAfx.h"
 
 #ifdef _DEBUG
 #include <shlwapi.h>
@@ -11,7 +11,7 @@ namespace DuiLib {
 //
 //
 
-void DUILIB_API DUI__Trace(LPCTSTR pstrFormat, ...)
+void UILIB_API DUI__Trace(LPCTSTR pstrFormat, ...)
 {
 #ifdef _DEBUG
     TCHAR szBuffer[300] = { 0 };
@@ -335,7 +335,7 @@ void CWindowWnd::CenterWindow()
 	::GetMonitorInfo(::MonitorFromWindow(hWnd, MONITOR_DEFAULTTONEAREST), &oMonitor);
 	rcArea = oMonitor.rcWork;
 
-	if( hWndCenter == NULL || IsIconic(hWndCenter))
+    if( hWndCenter == NULL )
 		rcCenter = rcArea;
 	else
 		::GetWindowRect(hWndCenter, &rcCenter);
@@ -357,14 +357,10 @@ void CWindowWnd::CenterWindow()
 
 void CWindowWnd::SetIcon(UINT nRes)
 {
-    // UMU: 防止某些 DPI 设置下图标模糊
-    //HICON hIcon = (HICON)::LoadImage(CPaintManagerUI::GetInstance(), MAKEINTRESOURCE(nRes), IMAGE_ICON, ::GetSystemMetrics(SM_CXICON), ::GetSystemMetrics(SM_CYICON), LR_DEFAULTCOLOR);
-    HICON hIcon = (HICON)::LoadImage(CPaintManagerUI::GetInstance(), MAKEINTRESOURCE(nRes), IMAGE_ICON, (::GetSystemMetrics(SM_CXICON) + 15) & ~15, (::GetSystemMetrics(SM_CYICON)+ 15) & ~15, LR_DEFAULTCOLOR);
+    HICON hIcon = (HICON)::LoadImage(CPaintManagerUI::GetInstance(), MAKEINTRESOURCE(nRes), IMAGE_ICON, ::GetSystemMetrics(SM_CXICON), ::GetSystemMetrics(SM_CYICON), LR_DEFAULTCOLOR);
     ASSERT(hIcon);
     ::SendMessage(m_hWnd, WM_SETICON, (WPARAM) TRUE, (LPARAM) hIcon);
-    // UMU: 防止某些 DPI 设置下图标模糊
-    //hIcon = (HICON)::LoadImage(CPaintManagerUI::GetInstance(), MAKEINTRESOURCE(nRes), IMAGE_ICON, ::GetSystemMetrics(SM_CXSMICON), ::GetSystemMetrics(SM_CYSMICON), LR_DEFAULTCOLOR);
-    hIcon = (HICON)::LoadImage(CPaintManagerUI::GetInstance(), MAKEINTRESOURCE(nRes), IMAGE_ICON, (::GetSystemMetrics(SM_CXSMICON) + 15) & ~15, (::GetSystemMetrics(SM_CYSMICON) + 15) & ~15, LR_DEFAULTCOLOR);
+    hIcon = (HICON)::LoadImage(CPaintManagerUI::GetInstance(), MAKEINTRESOURCE(nRes), IMAGE_ICON, ::GetSystemMetrics(SM_CXSMICON), ::GetSystemMetrics(SM_CYSMICON), LR_DEFAULTCOLOR);
     ASSERT(hIcon);
     ::SendMessage(m_hWnd, WM_SETICON, (WPARAM) FALSE, (LPARAM) hIcon);
 }

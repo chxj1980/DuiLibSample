@@ -1,4 +1,4 @@
-#include "../StdDui.h"
+#include "../StdAfx.h"//#include "StdAfx.h"
 
 #ifndef TRACE
 #define TRACE

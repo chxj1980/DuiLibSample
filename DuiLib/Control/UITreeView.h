@@ -1,5 +1,5 @@
-#ifndef __UITREEVIEW_H__
-#define __UITREEVIEW_H__
+#ifndef UITreeView_h__
+#define UITreeView_h__
 
 #include <vector>
 using namespace std;
@@ -13,7 +13,7 @@ namespace DuiLib
 	class CLabelUI;
 	class COptionUI;
 
-	class DUILIB_API CTreeNodeUI : public CListContainerElementUI
+	class UILIB_API CTreeNodeUI : public CListContainerElementUI
 	{
 	public:
 		CTreeNodeUI(CTreeNodeUI* _ParentNode = NULL);
@@ -24,10 +24,11 @@ namespace DuiLib
 		LPVOID	GetInterface(LPCTSTR pstrName);
 		void	DoEvent(TEventUI& event);
 		void	Invalidate();
-		bool	Select(bool bSelect = true, bool bTriggerEvent=true);
+		bool	Select(bool bSelect = true);
 
 		bool	Add(CControlUI* _pTreeNodeUI);
 		bool	AddAt(CControlUI* pControl, int iIndex);
+		bool	Remove(CControlUI* pControl);
 
 		void	SetVisibleTag(bool _IsVisible);
 		bool	GetVisibleTag();
@@ -60,7 +61,7 @@ namespace DuiLib
 
 		void	SetAttribute(LPCTSTR pstrName, LPCTSTR pstrValue);
 
-		CDuiPtrArray GetTreeNodes();
+		CStdPtrArray GetTreeNodes();
 
 		int			 GetTreeIndex();
 		int			 GetNodeIndex();
@@ -93,10 +94,10 @@ namespace DuiLib
 
 		CTreeNodeUI*			pParentTreeNode;
 
-		CDuiPtrArray			mTreeNodes;
+		CStdPtrArray			mTreeNodes;
 	};
 
-	class DUILIB_API CTreeViewUI : public CListUI,public INotifyUI
+	class UILIB_API CTreeViewUI : public CListUI,public INotifyUI
 	{
 	public:
 		CTreeViewUI(void);
@@ -105,15 +106,12 @@ namespace DuiLib
 	public:
 		virtual LPCTSTR GetClass() const;
 		virtual LPVOID	GetInterface(LPCTSTR pstrName);
-        virtual bool Add(CControlUI* pControl);
-        virtual bool AddAt(CControlUI* pControl, int iIndex);
-        virtual bool Remove(CControlUI* pControl, bool bDoNotDestroy=false);
-        virtual bool RemoveAt(int iIndex, bool bDoNotDestroy=false);
-        virtual void RemoveAll();
-
-        long AddAt(CTreeNodeUI* pControl, int iIndex);
-        bool AddAt(CTreeNodeUI* pControl,CTreeNodeUI* _IndexNode);
-
+		virtual bool Add(CTreeNodeUI* pControl );
+		virtual long AddAt(CTreeNodeUI* pControl, int iIndex );
+		virtual bool AddAt(CTreeNodeUI* pControl,CTreeNodeUI* _IndexNode);
+		virtual bool Remove(CTreeNodeUI* pControl);
+		virtual bool RemoveAt(int iIndex);
+		virtual void RemoveAll();
 		virtual bool OnCheckBoxChanged(void* param);
 		virtual bool OnFolderChanged(void* param);
 		virtual bool OnDBClickItem(void* param);
@@ -140,4 +138,4 @@ namespace DuiLib
 }
 
 
-#endif // __UITREEVIEW_H__
+#endif // UITreeView_h__

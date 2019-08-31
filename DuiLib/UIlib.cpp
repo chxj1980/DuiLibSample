@@ -47,7 +47,7 @@
 //
 
 
-#include "StdDui.h"
+#include "stdafx.h"
 #include "UIlib.h"
 
 
@@ -63,3 +63,4 @@ BOOL APIENTRY DllMain(HANDLE hModule, DWORD  dwReason, LPVOID /*lpReserved*/)
     }
     return TRUE;
 }
+
