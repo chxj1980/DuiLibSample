@@ -278,9 +278,9 @@ void CPaintManagerUI::GetHSL(short* H, short* S, short* L)
 void CPaintManagerUI::SetHSL(bool bUseHSL, short H, short S, short L)
 {
     if( H == m_H && S == m_S && L == m_L ) return;
-    m_H = CLAMP(H, 0, 360);
-    m_S = CLAMP(S, 0, 200);
-    m_L = CLAMP(L, 0, 200);
+    m_H = clamp(H, 0, 360);
+    m_S = clamp(S, 0, 200);
+    m_L = clamp(L, 0, 200);
     for( int i = 0; i < m_aPreMessages.GetSize(); i++ ) {
         CPaintManagerUI* pManager = static_cast<CPaintManagerUI*>(m_aPreMessages[i]);
         if( pManager != NULL && pManager->GetRoot() != NULL )
