@@ -13,5 +13,48 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="头文件\class">
+      <UniqueIdentifier>{6bca6b70-6894-46eb-b7b8-1f6895937de7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\class">
+      <UniqueIdentifier>{507b5c74-962b-44a6-ac32-07a8f90a0dca}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CGameFrameWnd.cpp">
+      <Filter>源文件\class</Filter>
+    </ClCompile>
+    <ClCompile Include="GameListUI.cpp">
+      <Filter>源文件\class</Filter>
+    </ClCompile>
+    <ClCompile Include="CLoginFrameWnd.cpp">
+      <Filter>源文件\class</Filter>
+    </ClCompile>
+    <ClCompile Include="DeskListUI.cpp">
+      <Filter>源文件\class</Filter>
+    </ClCompile>
+    <ClCompile Include="CDialogBuilderCallbackExt.cpp">
+      <Filter>源文件\class</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CGameFrameWnd.h">
+      <Filter>头文件\class</Filter>
+    </ClInclude>
+    <ClInclude Include="GameListUI.h">
+      <Filter>头文件\class</Filter>
+    </ClInclude>
+    <ClInclude Include="CLoginFrameWnd.h">
+      <Filter>头文件\class</Filter>
+    </ClInclude>
+    <ClInclude Include="DeskListUI.h">
+      <Filter>头文件\class</Filter>
+    </ClInclude>
+    <ClInclude Include="CDialogBuilderCallbackExt.h">
+      <Filter>头文件\class</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

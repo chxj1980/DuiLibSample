@@ -3,6 +3,8 @@
 
 #include <UIlib.h>
 
+#include "CGameFrameWnd.h"
+
 
 int APIENTRY WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE /*hPrevInstance*/, _In_ LPSTR /*lpCmdLine*/, _In_ int nCmdShow)
 {
@@ -15,7 +17,11 @@ int APIENTRY WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE /*hPrevInstanc
 		return EXIT_FAILURE;
 	}
 
-
+	CGameFrameWnd* pFrame = new CGameFrameWnd();
+	if (pFrame == NULL) return 0;
+	pFrame->Create(NULL, _T(""), UI_WNDSTYLE_FRAME, 0L, 0, 0, 1024, 738);
+	pFrame->CenterWindow();
+	::ShowWindow(*pFrame, SW_SHOWMAXIMIZED);
 
 	DuiLib::CPaintManagerUI::MessageLoop();
 
