@@ -25,14 +25,15 @@ namespace DuiLib {
 /////////////////////////////////////////////////////////////////////////////////////
 //
 #ifndef ASSERT
-#define ASSERT(expr)  _ASSERTE(expr)
+    #define ASSERT(expr)  _ASSERTE(expr)
 #endif
 
 #ifdef _DEBUG
-#ifndef DUITRACE
-#define DUITRACE DUI__Trace
-#endif
-#define DUITRACEMSG DUI__TraceMsg
+    #ifndef DUITRACE
+        #define DUITRACE DUI__Trace
+    #endif
+
+    #define DUITRACEMSG DUI__TraceMsg
 #else
 #ifndef DUITRACE
 #define DUITRACE
