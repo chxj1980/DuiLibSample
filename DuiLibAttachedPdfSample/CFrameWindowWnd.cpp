@@ -39,7 +39,7 @@ LRESULT CFrameWindowWnd::HandleMessage(UINT uMsg, WPARAM wParam, LPARAM lParam)
 		m_pm.Init(m_hWnd);
 		DuiLib::CControlUI* pButton = new DuiLib::CButtonUI;
 		pButton->SetName(_T("closebtn"));
-		pButton->SetBkColor(0xFFFF0000);
+		pButton->SetBkColor(0xFFFFFF00);
 		m_pm.AttachDialog(pButton);
 		m_pm.AddNotifier(this);
 		return 0;
@@ -48,6 +48,21 @@ LRESULT CFrameWindowWnd::HandleMessage(UINT uMsg, WPARAM wParam, LPARAM lParam)
 	{
 		::PostQuitMessage(0);
 	}
+    else if (uMsg == WM_NCACTIVATE)
+    {
+        if (!IsIconic(m_hWnd))
+        {
+            return (wParam == 0) ? TRUE : FALSE;
+        }
+    }
+    else if (uMsg == WM_NCCALCSIZE)
+    {
+        return 0;
+    }
+    else if (uMsg == WM_NCPAINT)
+    {
+        return 0;
+    }
 
 	LRESULT lRes = 0;
 	if (m_pm.MessageHandler(uMsg, wParam, lParam, lRes))
