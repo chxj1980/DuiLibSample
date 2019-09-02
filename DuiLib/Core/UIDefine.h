@@ -15,7 +15,7 @@ namespace DuiLib
     class CControlUI;
 
     // Structure for notifications to the outside world
-    typedef struct tagTNotifyUI
+    typedef struct// tagTNotifyUI
     {
         CDuiString sType;
         CDuiString sVirtualWnd;
@@ -107,6 +107,7 @@ protected:                                                                \
 	static const DUI_MSGMAP messageMap;                                   \
 	static const DUI_MSGMAP* PASCAL _GetBaseMessageMap();                 \
 	virtual const DUI_MSGMAP* GetMessageMap() const;                      \
+private:																  \
 
 #else
 #define DUI_DECLARE_MESSAGE_MAP()                                         \
@@ -115,6 +116,7 @@ private:                                                                  \
 protected:                                                                \
 	static  const DUI_MSGMAP messageMap;				                  \
 	virtual const DUI_MSGMAP* GetMessageMap() const;                      \
+private:																  \
 
 #endif
 

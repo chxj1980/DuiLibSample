@@ -242,7 +242,7 @@ namespace DuiLib
         return true;
     }
 
-    int CStdPtrArray::Find(LPVOID pData) const
+    int CStdPtrArray::Find(LPVOID pData) const//没有找到，则返回 - 1
     {
         for (int i = 0; i < m_nCount; i++) if (m_ppVoid[i] == pData) return i;
         return -1;

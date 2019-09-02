@@ -57,6 +57,7 @@
 #define MAX max
 #define MIN min
 #define lengthof(x) (sizeof(x) / sizeof(*(x)))
+//色调、饱和度、亮度的计算时会用到
 #define clamp(x, a, b) (MIN((b), (MAX((a), (x)))))
 
 //{{AFX_INSERT_LOCATION}}

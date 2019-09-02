@@ -20,8 +20,8 @@ m_pTag(NULL),
 m_dwBackColor(0),
 m_dwBackColor2(0),
 m_dwBackColor3(0),
-m_dwBorderColor(0),
-m_dwFocusBorderColor(0),
+m_dwBorderColor(0),      //初始化为黑色边界
+m_dwFocusBorderColor(0), //聚焦时,窗体的边界颜色，初始化为黑色边界
 m_bColorHSL(false),
 m_nBorderSize(0),
 m_nBorderStyle(PS_SOLID),
@@ -161,11 +161,13 @@ void CControlUI::SetBkImage(LPCTSTR pStrImage)
     Invalidate();
 }
 
+//获取边界颜色
 DWORD CControlUI::GetBorderColor() const
 {
     return m_dwBorderColor;
 }
 
+//设置边界颜色，设置边界颜色时重绘界面
 void CControlUI::SetBorderColor(DWORD dwBorderColor)
 {
     if( m_dwBorderColor == dwBorderColor ) return;
@@ -174,11 +176,13 @@ void CControlUI::SetBorderColor(DWORD dwBorderColor)
     Invalidate();
 }
 
+//获取 聚焦时,窗体的边界颜色
 DWORD CControlUI::GetFocusBorderColor() const
 {
     return m_dwFocusBorderColor;
 }
 
+//设置 聚焦时,窗体的边界颜色，设置完成后，重绘窗体
 void CControlUI::SetFocusBorderColor(DWORD dwBorderColor)
 {
     if( m_dwFocusBorderColor == dwBorderColor ) return;
@@ -213,12 +217,7 @@ void CControlUI::SetBorderSize(int nSize)
     Invalidate();
 }
 
-//************************************
-// 函数名称: SetBorderSize
-// 返回类型: void
-// 参数信息: RECT rc
-// 函数说明: 
-//************************************
+//边界尺寸改变时，重新绘制
 void CControlUI::SetBorderSize( RECT rc )
 {
 	m_rcBorderSize = rc;
@@ -998,88 +997,52 @@ void CControlUI::DoPostPaint(HDC hDC, const RECT& rcPaint)
     return;
 }
 
-//************************************
-// 函数名称: GetLeftBorderSize
-// 返回类型: int
-// 函数说明: 
-//************************************
+//获取边界尺寸的左侧长度
 int CControlUI::GetLeftBorderSize() const
 {
 	return m_rcBorderSize.left;
 }
 
-//************************************
-// 函数名称: SetLeftBorderSize
-// 返回类型: void
-// 参数信息: int nSize
-// 函数说明: 
-//************************************
+//设置边界尺寸的左侧长度，完成后重绘窗体
 void CControlUI::SetLeftBorderSize( int nSize )
 {
 	m_rcBorderSize.left = nSize;
 	Invalidate();
 }
 
-//************************************
-// 函数名称: GetTopBorderSize
-// 返回类型: int
-// 函数说明: 
-//************************************
+//获取边界尺寸的上部长度
 int CControlUI::GetTopBorderSize() const
 {
 	return m_rcBorderSize.top;
 }
 
-//************************************
-// 函数名称: SetTopBorderSize
-// 返回类型: void
-// 参数信息: int nSize
-// 函数说明: 
-//************************************
+//设置边界尺寸的上部长度，完成后重绘窗体
 void CControlUI::SetTopBorderSize( int nSize )
 {
 	m_rcBorderSize.top = nSize;
 	Invalidate();
 }
 
-//************************************
-// 函数名称: GetRightBorderSize
-// 返回类型: int
-// 函数说明: 
-//************************************
+//获取边界尺寸的右侧长度
 int CControlUI::GetRightBorderSize() const
 {
 	return m_rcBorderSize.right;
 }
 
-//************************************
-// 函数名称: SetRightBorderSize
-// 返回类型: void
-// 参数信息: int nSize
-// 函数说明: 
-//************************************
+//设置边界尺寸的右侧长度，完成后重绘窗体
 void CControlUI::SetRightBorderSize( int nSize )
 {
 	m_rcBorderSize.right = nSize;
 	Invalidate();
 }
 
-//************************************
-// 函数名称: GetBottomBorderSize
-// 返回类型: int
-// 函数说明: 
-//************************************
+//获取边界尺寸的下侧长度
 int CControlUI::GetBottomBorderSize() const
 {
 	return m_rcBorderSize.bottom;
 }
 
-//************************************
-// 函数名称: SetBottomBorderSize
-// 返回类型: void
-// 参数信息: int nSize
-// 函数说明: 
-//************************************
+//设置边界尺寸的下侧长度，完成后重绘窗体
 void CControlUI::SetBottomBorderSize( int nSize )
 {
 	m_rcBorderSize.bottom = nSize;

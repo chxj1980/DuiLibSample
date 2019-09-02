@@ -81,7 +81,7 @@ namespace DuiLib
         void Empty();
         void Resize(int iSize);
         bool IsEmpty() const;
-        int Find(LPVOID iIndex) const;
+        int Find(LPVOID iIndex) const;//没有找到，则返回-1
         bool Add(LPVOID pData);
         bool SetAt(int iIndex, LPVOID pData);
         bool InsertAt(int iIndex, LPVOID pData);
