@@ -1,12 +1,8 @@
 
-//#include "StdAfx.h"
-
-#include "UIRender.h"
-#include "UIDefine.h"
 #include "UIControl.h"
 
-#undef _UNICODE
 #include <tchar.h>
+#include "UIRender.h"
 
 namespace DuiLib {
 

@@ -1,15 +1,16 @@
 
 #include "UILabel.h"
-#include "UIRender.h"
 
-
-#include <atlconv.h>
-
-#undef _UNICODE
 #include <tchar.h>
 #include <string>
+#include <atlconv.h>
+#include "UIRender.h"
+
 namespace DuiLib
 {
+	/////////////////////////////////////////////////////////////////////////////////////////
+	//
+	//
 
 	Color _MakeRGB(int a, Color cl)
 	{
@@ -54,14 +55,6 @@ namespace DuiLib
 		::ZeroMemory(&m_rcTextPadding, sizeof(m_rcTextPadding));
 	}
 
-	//************************************
-	// Method:    ~CLabelUI
-	// FullName:  CLabelUI::~CLabelUI
-	// Access:    public 
-	// Returns:   
-	// Qualifier:
-	// Note:	  
-	//************************************
 	CLabelUI::~CLabelUI()
 	{
 		try
@@ -386,15 +379,6 @@ namespace DuiLib
 		}
 	}
 
-	//************************************
-	// Method:    SetTransShadow
-	// FullName:  CLabelUI::SetTransShadow
-	// Access:    public 
-	// Returns:   void
-	// Qualifier:
-	// Parameter: int _TransShadow
-	// Note:	  
-	//************************************
 	void CLabelUI::SetTransShadow(int _TransShadow)
 	{
 		try
@@ -407,14 +391,6 @@ namespace DuiLib
 		}
 	}
 
-	//************************************
-	// Method:    GetTransShadow
-	// FullName:  CLabelUI::GetTransShadow
-	// Access:    public 
-	// Returns:   int
-	// Qualifier:
-	// Note:	  
-	//************************************
 	int CLabelUI::GetTransShadow()
 	{
 		try
@@ -427,15 +403,6 @@ namespace DuiLib
 		}
 	}
 
-	//************************************
-	// Method:    SetTextRenderingHintAntiAlias
-	// FullName:  CLabelUI::SetTextRenderingHintAntiAlias
-	// Access:    public 
-	// Returns:   void
-	// Qualifier:
-	// Parameter: int _TextRenderingHintAntiAlias
-	// Note:	  
-	//************************************
 	void CLabelUI::SetTextRenderingHintAntiAlias(int _TextRenderingHintAntiAlias)
 	{
 		try
@@ -450,14 +417,6 @@ namespace DuiLib
 		}
 	}
 
-	//************************************
-	// Method:    GetTextRenderingHintAntiAlias
-	// FullName:  CLabelUI::GetTextRenderingHintAntiAlias
-	// Access:    public 
-	// Returns:   int
-	// Qualifier:
-	// Note:	  
-	//************************************
 	int CLabelUI::GetTextRenderingHintAntiAlias()
 	{
 		try
@@ -470,16 +429,6 @@ namespace DuiLib
 		}
 	}
 
-	//************************************
-	// Method:    SetShadowOffset
-	// FullName:  CLabelUI::SetShadowOffset
-	// Access:    public 
-	// Returns:   void
-	// Qualifier:
-	// Parameter: int _offset
-	// Parameter: int _angle
-	// Note:	  
-	//************************************
 	void CLabelUI::SetShadowOffset(int _offset, int _angle)
 	{
 		try
@@ -508,14 +457,6 @@ namespace DuiLib
 		}
 	}
 
-	//************************************
-	// Method:    GetShadowOffset
-	// FullName:  CLabelUI::GetShadowOffset
-	// Access:    public 
-	// Returns:   RectF
-	// Qualifier:
-	// Note:	  
-	//************************************
 	RectF CLabelUI::GetShadowOffset()
 	{
 		try
@@ -528,15 +469,6 @@ namespace DuiLib
 		}
 	}
 
-	//************************************
-	// Method:    SetText
-	// FullName:  CLabelUI::SetText
-	// Access:    public 
-	// Returns:   void
-	// Qualifier:
-	// Parameter: LPCTSTR pstrText
-	// Note:	  
-	//************************************
 	void CLabelUI::SetText(LPCTSTR pstrText)
 	{
 		try
@@ -552,14 +484,6 @@ namespace DuiLib
 		}
 	}
 
-	//************************************
-	// Method:    GetText
-	// FullName:  CLabelUI::GetText
-	// Access:    public 
-	// Returns:   UiLib::CDuiString
-	// Qualifier: const
-	// Note:	  
-	//************************************
 	CDuiString CLabelUI::GetText() const
 	{
 		try
@@ -574,15 +498,6 @@ namespace DuiLib
 		}
 	}
 
-	//************************************
-	// Method:    SetEnabledEffect
-	// FullName:  CLabelUI::SetEnabledEffect
-	// Access:    public 
-	// Returns:   void
-	// Qualifier:
-	// Parameter: bool _EnabledEffect
-	// Note:	  
-	//************************************
 	void CLabelUI::SetEnabledEffect(bool _EnabledEffect)
 	{
 		try
@@ -595,14 +510,6 @@ namespace DuiLib
 		}
 	}
 
-	//************************************
-	// Method:    GetEnabledEffect
-	// FullName:  CLabelUI::GetEnabledEffect
-	// Access:    public 
-	// Returns:   bool
-	// Qualifier:
-	// Note:	  
-	//************************************
 	bool CLabelUI::GetEnabledEffect()
 	{
 		try
@@ -615,15 +522,6 @@ namespace DuiLib
 		}
 	}
 
-	//************************************
-	// Method:    SetTextColor1
-	// FullName:  CLabelUI::SetTextColor1
-	// Access:    public 
-	// Returns:   void
-	// Qualifier:
-	// Parameter: DWORD _TextColor1
-	// Note:	  
-	//************************************
 	void CLabelUI::SetTextColor1(DWORD _TextColor1)
 	{
 		try
@@ -636,14 +534,6 @@ namespace DuiLib
 		}
 	}
 
-	//************************************
-	// Method:    GetTextColor1
-	// FullName:  CLabelUI::GetTextColor1
-	// Access:    public 
-	// Returns:   DWORD
-	// Qualifier:
-	// Note:	  
-	//************************************
 	DWORD CLabelUI::GetTextColor1()
 	{
 		try
@@ -656,15 +546,6 @@ namespace DuiLib
 		}
 	}
 
-	//************************************
-	// Method:    SetTextShadowColorA
-	// FullName:  CLabelUI::SetTextShadowColorA
-	// Access:    public 
-	// Returns:   void
-	// Qualifier:
-	// Parameter: DWORD _TextShadowColorA
-	// Note:	  
-	//************************************
 	void CLabelUI::SetTextShadowColorA(DWORD _TextShadowColorA)
 	{
 		try
@@ -677,14 +558,6 @@ namespace DuiLib
 		}
 	}
 
-	//************************************
-	// Method:    GetTextShadowColorA
-	// FullName:  CLabelUI::GetTextShadowColorA
-	// Access:    public 
-	// Returns:   DWORD
-	// Qualifier:
-	// Note:	  
-	//************************************
 	DWORD CLabelUI::GetTextShadowColorA()
 	{
 		try
@@ -697,15 +570,6 @@ namespace DuiLib
 		}
 	}
 
-	//************************************
-	// Method:    SetTextShadowColorB
-	// FullName:  CLabelUI::SetTextShadowColorB
-	// Access:    public 
-	// Returns:   void
-	// Qualifier:
-	// Parameter: DWORD _TextShadowColorB
-	// Note:	  
-	//************************************
 	void CLabelUI::SetTextShadowColorB(DWORD _TextShadowColorB)
 	{
 		try
@@ -718,14 +582,6 @@ namespace DuiLib
 		}
 	}
 
-	//************************************
-	// Method:    GetTextShadowColorB
-	// FullName:  CLabelUI::GetTextShadowColorB
-	// Access:    public 
-	// Returns:   DWORD
-	// Qualifier:
-	// Note:	  
-	//************************************
 	DWORD CLabelUI::GetTextShadowColorB()
 	{
 		try
@@ -738,15 +594,6 @@ namespace DuiLib
 		}
 	}
 
-	//************************************
-	// Method:    SetTransText
-	// FullName:  CLabelUI::SetTransText
-	// Access:    public 
-	// Returns:   void
-	// Qualifier:
-	// Parameter: int _TransText
-	// Note:	  
-	//************************************
 	void CLabelUI::SetTransText(int _TransText)
 	{
 		try
@@ -759,14 +606,6 @@ namespace DuiLib
 		}
 	}
 
-	//************************************
-	// Method:    GetTransText
-	// FullName:  CLabelUI::GetTransText
-	// Access:    public 
-	// Returns:   int
-	// Qualifier:
-	// Note:	  
-	//************************************
 	int CLabelUI::GetTransText()
 	{
 		try
@@ -779,15 +618,6 @@ namespace DuiLib
 		}
 	}
 
-	//************************************
-	// Method:    SetTransShadow1
-	// FullName:  CLabelUI::SetTransShadow1
-	// Access:    public 
-	// Returns:   void
-	// Qualifier:
-	// Parameter: int _TransShadow
-	// Note:	  
-	//************************************
 	void CLabelUI::SetTransShadow1(int _TransShadow)
 	{
 		try
@@ -800,14 +630,6 @@ namespace DuiLib
 		}
 	}
 
-	//************************************
-	// Method:    GetTransShadow1
-	// FullName:  CLabelUI::GetTransShadow1
-	// Access:    public 
-	// Returns:   int
-	// Qualifier:
-	// Note:	  
-	//************************************
 	int CLabelUI::GetTransShadow1()
 	{
 		try
@@ -820,15 +642,6 @@ namespace DuiLib
 		}
 	}
 
-	//************************************
-	// Method:    SetTransText1
-	// FullName:  CLabelUI::SetTransText1
-	// Access:    public 
-	// Returns:   void
-	// Qualifier:
-	// Parameter: int _TransText
-	// Note:	  
-	//************************************
 	void CLabelUI::SetTransText1(int _TransText)
 	{
 		try
@@ -841,14 +654,6 @@ namespace DuiLib
 		}
 	}
 
-	//************************************
-	// Method:    GetTransText1
-	// FullName:  CLabelUI::GetTransText1
-	// Access:    public 
-	// Returns:   int
-	// Qualifier:
-	// Note:	  
-	//************************************
 	int CLabelUI::GetTransText1()
 	{
 		try
@@ -861,15 +666,6 @@ namespace DuiLib
 		}
 	}
 
-	//************************************
-	// Method:    SetGradientAngle
-	// FullName:  CLabelUI::SetGradientAngle
-	// Access:    public 
-	// Returns:   void
-	// Qualifier:
-	// Parameter: float _SetGradientAngle
-	// Note:	  
-	//************************************
 	void CLabelUI::SetGradientAngle(int _SetGradientAngle)
 	{
 		try
@@ -882,14 +678,6 @@ namespace DuiLib
 		}
 	}
 
-	//************************************
-	// Method:    GetGradientAngle
-	// FullName:  CLabelUI::GetGradientAngle
-	// Access:    public 
-	// Returns:   int
-	// Qualifier:
-	// Note:	  
-	//************************************
 	int CLabelUI::GetGradientAngle()
 	{
 		try
@@ -902,15 +690,6 @@ namespace DuiLib
 		}
 	}
 
-	//************************************
-	// Method:    SetEnabledStroke
-	// FullName:  CLabelUI::SetEnabledStroke
-	// Access:    public 
-	// Returns:   void
-	// Qualifier:
-	// Parameter: bool _EnabledStroke
-	// Note:	  
-	//************************************
 	void CLabelUI::SetEnabledStroke(bool _EnabledStroke)
 	{
 		try
@@ -923,14 +702,6 @@ namespace DuiLib
 		}
 	}
 
-	//************************************
-	// Method:    GetEnabledStroke
-	// FullName:  CLabelUI::GetEnabledStroke
-	// Access:    public 
-	// Returns:   bool
-	// Qualifier:
-	// Note:	  
-	//************************************
 	bool CLabelUI::GetEnabledStroke()
 	{
 		try
@@ -943,15 +714,6 @@ namespace DuiLib
 		}
 	}
 
-	//************************************
-	// Method:    SetTransStroke
-	// FullName:  CLabelUI::SetTransStroke
-	// Access:    public 
-	// Returns:   void
-	// Qualifier:
-	// Parameter: int _TransStroke
-	// Note:	  
-	//************************************
 	void CLabelUI::SetTransStroke(int _TransStroke)
 	{
 		try
@@ -964,14 +726,6 @@ namespace DuiLib
 		}
 	}
 
-	//************************************
-	// Method:    GetTransStroke
-	// FullName:  CLabelUI::GetTransStroke
-	// Access:    public 
-	// Returns:   int
-	// Qualifier:
-	// Note:	  
-	//************************************
 	int CLabelUI::GetTransStroke()
 	{
 		try
@@ -984,15 +738,6 @@ namespace DuiLib
 		}
 	}
 
-	//************************************
-	// Method:    SetStrokeColor
-	// FullName:  CLabelUI::SetStrokeColor
-	// Access:    public 
-	// Returns:   void
-	// Qualifier:
-	// Parameter: DWORD _StrokeColor
-	// Note:	  
-	//************************************
 	void CLabelUI::SetStrokeColor(DWORD _StrokeColor)
 	{
 		try
@@ -1005,14 +750,6 @@ namespace DuiLib
 		}
 	}
 
-	//************************************
-	// Method:    GetStrokeColor
-	// FullName:  CLabelUI::GetStrokeColor
-	// Access:    public 
-	// Returns:   DWORD
-	// Qualifier:
-	// Note:	  
-	//************************************
 	DWORD CLabelUI::GetStrokeColor()
 	{
 		try
@@ -1025,15 +762,6 @@ namespace DuiLib
 		}
 	}
 
-	//************************************
-	// Method:    SetEnabledShadow
-	// FullName:  CLabelUI::SetEnabledShadow
-	// Access:    public 
-	// Returns:   void
-	// Qualifier:
-	// Parameter: bool _EnabledShadowe
-	// Note:	  
-	//************************************
 	void CLabelUI::SetEnabledShadow(bool _EnabledShadowe)
 	{
 		try
@@ -1046,14 +774,6 @@ namespace DuiLib
 		}
 	}
 
-	//************************************
-	// Method:    GetEnabledShadow
-	// FullName:  CLabelUI::GetEnabledShadow
-	// Access:    public 
-	// Returns:   bool
-	// Qualifier:
-	// Note:	  
-	//************************************
 	bool CLabelUI::GetEnabledShadow()
 	{
 		try
@@ -1066,15 +786,6 @@ namespace DuiLib
 		}
 	}
 
-	//************************************
-	// Method:    SetGradientLength
-	// FullName:  CLabelUI::SetGradientLength
-	// Access:    public 
-	// Returns:   void
-	// Qualifier:
-	// Parameter: int _GradientLength
-	// Note:	  
-	//************************************
 	void CLabelUI::SetGradientLength(int _GradientLength)
 	{
 		try
@@ -1087,14 +798,6 @@ namespace DuiLib
 		}
 	}
 
-	//************************************
-	// Method:    GetGradientLength
-	// FullName:  CLabelUI::GetGradientLength
-	// Access:    public 
-	// Returns:   int
-	// Qualifier:
-	// Note:	  
-	//************************************
 	int CLabelUI::GetGradientLength()
 	{
 		try

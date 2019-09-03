@@ -1,7 +1,6 @@
 
-#include <Windows.h>
-#include "UIManager.h"
 #include "Utils.h"
+#include "UIManager.h"
 #include "UIDelegate.h"
 
 #define UILIB_API

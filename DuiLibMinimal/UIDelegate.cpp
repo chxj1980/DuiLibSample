@@ -1,8 +1,11 @@
-//#include "StdAfx.h"
 
 #include "UIDelegate.h"
 
 namespace DuiLib {
+
+	/////////////////////////////////////////////////////////////////////////////////
+	//
+	//
 
 	CDelegateBase::CDelegateBase(void* pObject, void* pFn)
 	{
@@ -80,6 +83,7 @@ namespace DuiLib {
 			}
 		}
 	}
+
 	void CEventSource::operator-= (FnType pFn)
 	{
 		(*this) -= MakeDelegate(pFn);

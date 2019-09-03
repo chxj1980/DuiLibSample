@@ -1,42 +1,12 @@
 
+#include "Utils.h"
 
-//#include "stdafx.h"
-#undef _UNICODE
 #include <stdio.h>
 #include <tchar.h>
 #include <malloc.h>
-#include "Utils.h"
 
 namespace DuiLib
 {
-
-	///////////////////////////////////////////////////////////////////////////////////////
-	////
-	////
-
-	//CPoint::CPoint()
-	//{
-	//	x = y = 0;
-	//}
-
-	//CPoint::CPoint(const POINT& src)
-	//{
-	//	x = src.x;
-	//	y = src.y;
-	//}
-
-	//CPoint::CPoint(int _x, int _y)
-	//{
-	//	x = _x;
-	//	y = _y;
-	//}
-
-	//CPoint::CPoint(LPARAM lParam)
-	//{
-	//	x = GET_X_LPARAM(lParam);
-	//	y = GET_Y_LPARAM(lParam);
-	//}
-
 
 	/////////////////////////////////////////////////////////////////////////////////////
 	//
@@ -64,7 +34,6 @@ namespace DuiLib
 		cx = _cx;
 		cy = _cy;
 	}
-
 
 	/////////////////////////////////////////////////////////////////////////////////////
 	//
@@ -149,8 +118,7 @@ namespace DuiLib
 	{
 		::UnionRect(this, this, &rc);
 	}
-
-
+	
 	/////////////////////////////////////////////////////////////////////////////////////
 	//
 	//
@@ -275,8 +243,7 @@ namespace DuiLib
 		//ASSERT(iIndex >= 0 && iIndex < m_nCount);
 		return m_ppVoid[iIndex];
 	}
-
-
+	
 	/////////////////////////////////////////////////////////////////////////////////////
 	//
 	//
@@ -354,8 +321,7 @@ namespace DuiLib
 		//ASSERT(iIndex >= 0 && iIndex < m_nCount);
 		return m_pVoid + (iIndex * m_iElementSize);
 	}
-
-
+	
 	/////////////////////////////////////////////////////////////////////////////////////
 	//
 	//
@@ -931,20 +897,5 @@ namespace DuiLib
 	{
 		return GetAt(nIndex);
 	}
-
-
-	///////////////////////////////////////////////////////////////////////////////////////
-	////
-	////
-
-	//CWaitCursor::CWaitCursor()
-	//{
-	//	m_hOrigCursor = ::SetCursor(::LoadCursor(NULL, IDC_WAIT));
-	//}
-
-	//CWaitCursor::~CWaitCursor()
-	//{
-	//	::SetCursor(m_hOrigCursor);
-	//}
 
 } // namespace DuiLib

@@ -6,69 +6,28 @@
 #ifndef __UIBASE_H__
 #define __UIBASE_H__
 
-
 #pragma once
 
 namespace DuiLib {
-	/////////////////////////////////////////////////////////////////////////////////////
-	//
-
-#define UI_WNDSTYLE_CONTAINER  (0)
-#define UI_WNDSTYLE_FRAME      (WS_VISIBLE | WS_OVERLAPPEDWINDOW)
-#define UI_WNDSTYLE_CHILD      (WS_VISIBLE | WS_CHILD | WS_CLIPSIBLINGS | WS_CLIPCHILDREN)
-#define UI_WNDSTYLE_DIALOG     (WS_VISIBLE | WS_POPUPWINDOW | WS_CAPTION | WS_DLGFRAME | WS_CLIPSIBLINGS | WS_CLIPCHILDREN)
-
-#define UI_WNDSTYLE_EX_FRAME   (WS_EX_WINDOWEDGE)
-#define UI_WNDSTYLE_EX_DIALOG  (WS_EX_TOOLWINDOW | WS_EX_DLGMODALFRAME)
-
-#define UI_CLASSSTYLE_CONTAINER  (0)
-#define UI_CLASSSTYLE_FRAME      (CS_VREDRAW | CS_HREDRAW)
-#define UI_CLASSSTYLE_CHILD      (CS_VREDRAW | CS_HREDRAW | CS_DBLCLKS | CS_SAVEBITS)
-#define UI_CLASSSTYLE_DIALOG     (CS_VREDRAW | CS_HREDRAW | CS_DBLCLKS | CS_SAVEBITS)
-
-
-/////////////////////////////////////////////////////////////////////////////////////
-//
-#ifndef ASSERT
-#define ASSERT(expr)  _ASSERTE(expr)
-#endif
-
-#ifdef _DEBUG
-#ifndef DUITRACE
-#define DUITRACE DUI__Trace
-#endif
-#define DUITRACEMSG DUI__TraceMsg
-#else
-#ifndef DUITRACE
-#define DUITRACE
-#endif
-#define DUITRACEMSG _T("")
-#endif
-
-	//void UILIB_API DUI__Trace(LPCTSTR pstrFormat, ...);
-	//LPCTSTR UILIB_API DUI__TraceMsg(UINT uMsg);
 
 	/////////////////////////////////////////////////////////////////////////////////////
 	//
 
-	//class UILIB_API CNotifyPump
-	//{
-	//public:
-	//	bool AddVirtualWnd(CDuiString strName, CNotifyPump* pObject);//添加CNotifyPump类型对象
-	//	bool RemoveVirtualWnd(CDuiString strName);					//删除CNotifyPump类型对象
-	//	void NotifyPump(TNotifyUI& msg);
-	//	bool LoopDispatch(TNotifyUI& msg);
-	//	DUI_DECLARE_MESSAGE_MAP()
-	//	//private:                                                \
-	//	//	static const DUI_MSGMAP_ENTRY _messageEntries[];      \
-	//	//protected:                                              \
-	//	//	static const DUI_MSGMAP messageMap;                   \
-	//	//	static const DUI_MSGMAP* PASCAL _GetBaseMessageMap(); \
-	//	//	virtual const DUI_MSGMAP* GetMessageMap() const;      \
+	#define UI_WNDSTYLE_CONTAINER  (0)
+	#define UI_WNDSTYLE_FRAME      (WS_VISIBLE | WS_OVERLAPPEDWINDOW)
+	#define UI_WNDSTYLE_CHILD      (WS_VISIBLE | WS_CHILD | WS_CLIPSIBLINGS | WS_CLIPCHILDREN)
+	#define UI_WNDSTYLE_DIALOG     (WS_VISIBLE | WS_POPUPWINDOW | WS_CAPTION | WS_DLGFRAME | WS_CLIPSIBLINGS | WS_CLIPCHILDREN)
 
-	//private:
-	//	CStdStringPtrMap m_VirtualWndMap;//存储CNotifyPump类型的变量
-	//};
+	#define UI_WNDSTYLE_EX_FRAME   (WS_EX_WINDOWEDGE)
+	#define UI_WNDSTYLE_EX_DIALOG  (WS_EX_TOOLWINDOW | WS_EX_DLGMODALFRAME)
+
+	#define UI_CLASSSTYLE_CONTAINER  (0)
+	#define UI_CLASSSTYLE_FRAME      (CS_VREDRAW | CS_HREDRAW)
+	#define UI_CLASSSTYLE_CHILD      (CS_VREDRAW | CS_HREDRAW | CS_DBLCLKS | CS_SAVEBITS)
+	#define UI_CLASSSTYLE_DIALOG     (CS_VREDRAW | CS_HREDRAW | CS_DBLCLKS | CS_SAVEBITS)
+
+	/////////////////////////////////////////////////////////////////////////////////////
+	//
 
 	class UILIB_API CWindowWnd
 	{

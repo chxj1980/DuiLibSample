@@ -1,20 +1,14 @@
 
-//#include "StdAfx.h"
-#include <Windows.h>
+#include "UIManager.h"
+
 #include <windowsx.h>
 #include <zmouse.h>
 #include <OleCtl.h>
-//#include <CommCtrl.h>
-
+#include <tchar.h>
 #include "UIControl.h"
-#include "Utils.h"
-#include "UIDefine.h"
 #include "UIRender.h"
 
 #pragma comment( lib, "comctl32.lib" )
-
-#undef _UNICODE
-#include <tchar.h>
 
 #define UILIB_API
 
@@ -22,8 +16,22 @@
 #define MIN min
 #define CLAMP(x,a,b) (MIN((b),MAX((a),(x))))
 
+/////////////////////////////////////////////////////////////////////////////////////////////
+//
+//
+
 DECLARE_HANDLE(HZIP);	// An HZIP identifies a zip file that has been opened
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+//
+//
+
 typedef DWORD ZRESULT;
+
+/////////////////////////////////////////////////////////////////////////////////////////////
+//
+//
+
 #define OpenZip OpenZipU
 #define CloseZip(hz) CloseZipU(hz)
 extern HZIP OpenZipU(void* z, unsigned int len, DWORD flags);

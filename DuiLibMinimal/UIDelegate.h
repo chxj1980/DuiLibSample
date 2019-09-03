@@ -10,6 +10,10 @@
 
 namespace DuiLib {
 
+	/////////////////////////////////////////////////////////////////////////////////////
+	//
+	//
+
 	class UILIB_API CDelegateBase
 	{
 	public:
@@ -30,6 +34,10 @@ namespace DuiLib {
 		void* m_pFn;
 	};
 
+	/////////////////////////////////////////////////////////////////////////////////////
+	//
+	//
+
 	class CDelegateStatic : public CDelegateBase
 	{
 		typedef bool (*Fn)(void*);
@@ -45,6 +53,10 @@ namespace DuiLib {
 			return (*pFn)(param);
 		}
 	};
+
+	/////////////////////////////////////////////////////////////////////////////////////
+	//
+	//
 
 	template <class O, class T>
 	class CDelegate : public CDelegateBase
@@ -65,6 +77,10 @@ namespace DuiLib {
 	private:
 		Fn m_pFn;
 	};
+	
+	/////////////////////////////////////////////////////////////////////////////////////
+	//
+	//
 
 	template <class O, class T>
 	CDelegate<O, T> MakeDelegate(O* pObject, bool (T::* pFn)(void*))
@@ -76,6 +92,10 @@ namespace DuiLib {
 	{
 		return CDelegateStatic(pFn);
 	}
+
+	/////////////////////////////////////////////////////////////////////////////////////
+	//
+	//
 
 	class UILIB_API CEventSource
 	{
