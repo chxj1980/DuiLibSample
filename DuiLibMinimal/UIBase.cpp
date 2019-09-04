@@ -168,7 +168,7 @@ namespace DuiLib {
 	bool CWindowWnd::RegisterWindowClass()
 	{
 		WNDCLASS wc = { 0 };
-		wc.style = GetClassStyle();
+		wc.style = GetClassStyle();//描述窗体风格（class style），比如：CS_HREDRAW | CS_VREDRAW
 		wc.cbClsExtra = 0;
 		wc.cbWndExtra = 0;
 		wc.hIcon = NULL;
@@ -207,15 +207,15 @@ namespace DuiLib {
 	LRESULT CALLBACK CWindowWnd::__WndProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 	{
 		CWindowWnd* pThis = NULL;
-		if (uMsg == WM_NCCREATE) {
+		if (uMsg == WM_NCCREATE) {//窗体被创建时，比WM_CREATE还先到达的一个消息，消息的wParam没有用，lParam为一个CREATESTRUCT结构，包含被创建窗体的信息
 			LPCREATESTRUCT lpcs = reinterpret_cast<LPCREATESTRUCT>(lParam);
-			pThis = static_cast<CWindowWnd*>(lpcs->lpCreateParams);
+			pThis = static_cast<CWindowWnd*>(lpcs->lpCreateParams);//lpCreateParams，该参数为调用CreateWindowEx时的参数lParam。当前类中，调用时，lParam的值被设置为this!!!需要注意的是，this代表的指针地址既是子类对象的起始地址，也是父类对象的起始地址
 			pThis->m_hWnd = hWnd;
-			::SetWindowLongPtr(hWnd, GWLP_USERDATA, reinterpret_cast<LPARAM>(pThis));
+			::SetWindowLongPtr(hWnd, GWLP_USERDATA, reinterpret_cast<LPARAM>(pThis));//增加一些内存空间吗？
 		}
 		else {
 			pThis = reinterpret_cast<CWindowWnd*>(::GetWindowLongPtr(hWnd, GWLP_USERDATA));
-			if (uMsg == WM_NCDESTROY && pThis != NULL) {
+			if (uMsg == WM_NCDESTROY && pThis != NULL) {//WM_NCDESTROY，窗体的非客户端区域将被销毁的消息。
 				LRESULT lRes = ::CallWindowProc(pThis->m_OldWndProc, hWnd, uMsg, wParam, lParam);
 				::SetWindowLongPtr(pThis->m_hWnd, GWLP_USERDATA, 0L);
 				if (pThis->m_bSubclassed) pThis->Unsubclass();
@@ -285,7 +285,7 @@ namespace DuiLib {
 
 	LRESULT CWindowWnd::HandleMessage(UINT uMsg, WPARAM wParam, LPARAM lParam)
 	{
-		return ::CallWindowProc(m_OldWndProc, m_hWnd, uMsg, wParam, lParam);
+		return ::CallWindowProc(m_OldWndProc, m_hWnd, uMsg, wParam, lParam);//将消息传送给指定的窗口过程函数，因为同一类窗体共用窗口过程函数，因此，需要传递窗体句柄，以指示消息适用于哪个窗体。
 	}
 
 	void CWindowWnd::OnFinalMessage(HWND /*hWnd*/)

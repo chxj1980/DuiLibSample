@@ -207,7 +207,7 @@ namespace DuiLib {
 		static const CDuiString& GetResourceZip();
 		static bool IsCachedResourceZip();
 		static HANDLE GetResourceZipHandle();
-		static void SetInstance(HINSTANCE hInst);
+		static void SetInstance(HINSTANCE hInst);                    //public访问权限的静态成员方法，调用该方法设置了一个private访问权限的静态成员变量，后面可以考虑将静态部分从当前类CPaintManagerUI中分离出来
 		static void SetCurrentPath(LPCTSTR pStrPath);
 		static void SetResourceDll(HINSTANCE hInst);
 		static void SetResourcePath(LPCTSTR pStrPath);

@@ -40,9 +40,9 @@ namespace DuiLib {
 		bool RegisterWindowClass();
 		bool RegisterSuperclass();
 
-		HWND Create(HWND hwndParent, LPCTSTR pstrName, DWORD dwStyle, DWORD dwExStyle, const RECT rc, HMENU hMenu = NULL);
+		HWND Create(HWND hwndParent, LPCTSTR pstrName, DWORD dwStyle, DWORD dwExStyle, const RECT rc, HMENU hMenu = NULL);//没有菜单的，指定大小的窗口
 		HWND Create(HWND hwndParent, LPCTSTR pstrName, DWORD dwStyle, DWORD dwExStyle, int x = CW_USEDEFAULT, int y = CW_USEDEFAULT, int cx = CW_USEDEFAULT, int cy = CW_USEDEFAULT, HMENU hMenu = NULL);
-		HWND CreateDuiWindow(HWND hwndParent, LPCTSTR pstrWindowName, DWORD dwStyle = 0, DWORD dwExStyle = 0);
+		HWND CreateDuiWindow(HWND hwndParent, LPCTSTR pstrWindowName, DWORD dwStyle = 0, DWORD dwExStyle = 0);            //没有菜单的，尺寸为0的窗口
 		HWND Subclass(HWND hWnd);
 		void Unsubclass();
 		void ShowWindow(bool bShow = true, bool bTakeFocus = true);
@@ -56,15 +56,15 @@ namespace DuiLib {
 		void ResizeClient(int cx = -1, int cy = -1);
 
 	protected:
-		virtual LPCTSTR GetWindowClassName() const = 0;
-		virtual LPCTSTR GetSuperClassName() const;
-		virtual UINT GetClassStyle() const;
+		virtual LPCTSTR GetWindowClassName() const = 0;//当前类并未实现，留给子类实现
+		virtual LPCTSTR GetSuperClassName() const;     //
+		virtual UINT GetClassStyle() const;            //获取窗体风格（class style），比如：CS_HREDRAW | CS_VREDRAW
 
 		virtual LRESULT HandleMessage(UINT uMsg, WPARAM wParam, LPARAM lParam);
 		virtual void OnFinalMessage(HWND hWnd);
 
-		static LRESULT CALLBACK __WndProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
-		static LRESULT CALLBACK __ControlProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
+		static LRESULT CALLBACK __WndProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam);    //static成员，相当于一个独立的函数，该函数作为窗体的回调函数——窗体过程。
+		static LRESULT CALLBACK __ControlProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam);//static成员，相当于一个独立的函数，该函数作为控件的回调函数？
 
 	protected:
 		HWND m_hWnd;
