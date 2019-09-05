@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<Window size="530,520">
+    <VerticalLayout width="537" height="511" bkimage="toolbar_hover.png">
+        <HorizontalLayout width="530" height="41">
+            <HorizontalLayout width="41" height="41" bkimage="start.png" />
+            <Label text="欢迎使用简陋计算器" float="true" pos="41,0,0,0" width="489" height="41" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+        </HorizontalLayout>
+        <Edit name="editUI1" float="true" pos="70,163,0,0" width="129" height="64" bkcolor="#FFFFFFFF" textpadding="4,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+        <Edit name="editUI2" float="true" pos="277,163,0,0" width="129" height="64" bkcolor="#FFFFFFFF" textpadding="4,3,4,3" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" />
+        <Text name="textUI2" text="+" float="true" pos="232,188,0,0" width="13" height="11" textpadding="2,0,2,0" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" font="500" align="centerwrap" />
+        <Button name="buttonUI1" float="true" pos="206,283,0,0" width="73" height="72" bkimage="v2-470fce62d710ca6cb434035cb27c86ec_r.jpg" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+        <Label name="labelUI1" text="..." float="true" pos="150,399,0,0" width="195" height="57" textcolor="#FF000000" disabledtextcolor="#FFA7A6AA" align="center" />
+    </VerticalLayout>
+</Window>
