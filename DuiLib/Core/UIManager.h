@@ -82,7 +82,7 @@ namespace DuiLib {
 /////////////////////////////////////////////////////////////////////////////////////
 //
 
-	typedef struct// tagTFontInfo
+	typedef struct tagTFontInfo
 	{
 		HFONT hFont;
 		CDuiString sFontName;
@@ -93,7 +93,7 @@ namespace DuiLib {
 		TEXTMETRIC tm;
 	} TFontInfo;
 
-	typedef struct// tagTImageInfo
+	typedef struct tagTImageInfo
 	{
 		HBITMAP hBitmap;
 		int nX;
@@ -105,7 +105,7 @@ namespace DuiLib {
 
 	// Structure for notifications from the system
 	// to the control implementation.
-	typedef struct// tagTEventUI
+	typedef struct tagTEventUI
 	{
 		int Type;
 		CControlUI* pSender;
@@ -118,7 +118,7 @@ namespace DuiLib {
 	} TEventUI;
 
 	// Structure for relative position to the parent
-	typedef struct// tagTRelativePosUI
+	typedef struct tagTRelativePosUI
 	{
 		bool bRelative;
 		SIZE szParent;

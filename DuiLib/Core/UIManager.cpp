@@ -30,7 +30,7 @@ namespace DuiLib {
 		return uState;
 	}
 
-	typedef struct// tagFINDTABINFO
+	typedef struct tagFINDTABINFO
 	{
 		CControlUI* pFocus;
 		CControlUI* pLast;
@@ -38,13 +38,13 @@ namespace DuiLib {
 		bool bNextIsIt;
 	} FINDTABINFO;
 
-	typedef struct// tagFINDSHORTCUT
+	typedef struct tagFINDSHORTCUT
 	{
 		TCHAR ch;
 		bool bPickNext;
 	} FINDSHORTCUT;
 
-	typedef struct// tagTIMERINFO
+	typedef struct tagTIMERINFO
 	{
 		CControlUI* pSender;
 		UINT nLocalID;
