@@ -19,6 +19,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DuiLibAttachedPdfSample", "
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DuiLibMinimal", "DuiLibMinimal\DuiLibMinimal.vcxproj", "{D5C41C51-B2C8-4750-9487-1E693C1FDF89}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DuiLibCompleteWorkFlow", "DuiLibCompleteWorkFlow\DuiLibCompleteWorkFlow.vcxproj", "{12B1E023-B357-422C-B913-A606596A17E1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -91,6 +93,14 @@ Global
 		{D5C41C51-B2C8-4750-9487-1E693C1FDF89}.Release|x64.Build.0 = Release|x64
 		{D5C41C51-B2C8-4750-9487-1E693C1FDF89}.Release|x86.ActiveCfg = Release|Win32
 		{D5C41C51-B2C8-4750-9487-1E693C1FDF89}.Release|x86.Build.0 = Release|Win32
+		{12B1E023-B357-422C-B913-A606596A17E1}.Debug|x64.ActiveCfg = Debug|x64
+		{12B1E023-B357-422C-B913-A606596A17E1}.Debug|x64.Build.0 = Debug|x64
+		{12B1E023-B357-422C-B913-A606596A17E1}.Debug|x86.ActiveCfg = Debug|Win32
+		{12B1E023-B357-422C-B913-A606596A17E1}.Debug|x86.Build.0 = Debug|Win32
+		{12B1E023-B357-422C-B913-A606596A17E1}.Release|x64.ActiveCfg = Release|x64
+		{12B1E023-B357-422C-B913-A606596A17E1}.Release|x64.Build.0 = Release|x64
+		{12B1E023-B357-422C-B913-A606596A17E1}.Release|x86.ActiveCfg = Release|Win32
+		{12B1E023-B357-422C-B913-A606596A17E1}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

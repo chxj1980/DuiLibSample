@@ -48,7 +48,7 @@ namespace DuiLib {
 	{
 		if (GetSuperClassName() != NULL && !RegisterSuperclass()) return NULL;
 		if (GetSuperClassName() == NULL && !RegisterWindowClass()) return NULL;
-		m_hWnd = ::CreateWindowEx(dwExStyle, GetWindowClassName(), pstrName, dwStyle, x, y, cx, cy, hwndParent, hMenu, CPaintManagerUI::GetInstance(), this);
+		m_hWnd = ::CreateWindowEx(dwExStyle, GetWindowClassName(), pstrName, dwStyle, x, y, cx, cy, hwndParent, hMenu, CPaintManagerUI::GetInstance(), this);//this 为 CWindowWnd *
 		//ASSERT(m_hWnd != NULL);
 		return m_hWnd;
 	}
@@ -207,23 +207,24 @@ namespace DuiLib {
 	LRESULT CALLBACK CWindowWnd::__WndProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 	{
 		CWindowWnd* pThis = NULL;
-		if (uMsg == WM_NCCREATE) {//窗体被创建时，比WM_CREATE还先到达的一个消息，消息的wParam没有用，lParam为一个CREATESTRUCT结构，包含被创建窗体的信息
+		if (uMsg == WM_NCCREATE) {//窗体被创建时，比WM_CREATE更先到达的一个消息，消息的wParam没有用，lParam为一个CREATESTRUCT结构，包含被创建窗体的信息
 			LPCREATESTRUCT lpcs = reinterpret_cast<LPCREATESTRUCT>(lParam);
 			pThis = static_cast<CWindowWnd*>(lpcs->lpCreateParams);//lpCreateParams，该参数为调用CreateWindowEx时的参数lParam。当前类中，调用时，lParam的值被设置为this!!!需要注意的是，this代表的指针地址既是子类对象的起始地址，也是父类对象的起始地址
 			pThis->m_hWnd = hWnd;
-			::SetWindowLongPtr(hWnd, GWLP_USERDATA, reinterpret_cast<LPARAM>(pThis));//增加一些内存空间吗？
+			::SetWindowLongPtr(hWnd, GWLP_USERDATA, reinterpret_cast<LPARAM>(pThis));//保存this指针，下次使用
 		}
 		else {
-			pThis = reinterpret_cast<CWindowWnd*>(::GetWindowLongPtr(hWnd, GWLP_USERDATA));
-			if (uMsg == WM_NCDESTROY && pThis != NULL) {//WM_NCDESTROY，窗体的非客户端区域将被销毁的消息。
+			pThis = reinterpret_cast<CWindowWnd*>(::GetWindowLongPtr(hWnd, GWLP_USERDATA));//获取到this指针
+			if (uMsg == WM_NCDESTROY && pThis != NULL) {//WM_NCDESTROY，窗体的非客户端区域将被销毁的消息。WM_NCDESTROY的含义是 Windows Message NonClient Destroy
 				LRESULT lRes = ::CallWindowProc(pThis->m_OldWndProc, hWnd, uMsg, wParam, lParam);
-				::SetWindowLongPtr(pThis->m_hWnd, GWLP_USERDATA, 0L);
+				::SetWindowLongPtr(pThis->m_hWnd, GWLP_USERDATA, 0L);//参数0L是什么意思？
 				if (pThis->m_bSubclassed) pThis->Unsubclass();
 				pThis->m_hWnd = NULL;
 				pThis->OnFinalMessage(hWnd);
 				return lRes;
 			}
 		}
+
 		if (pThis != NULL) {
 			return pThis->HandleMessage(uMsg, wParam, lParam);
 		}

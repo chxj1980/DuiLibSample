@@ -67,7 +67,7 @@ namespace DuiLib {
 		static LRESULT CALLBACK __ControlProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam);//static成员，相当于一个独立的函数，该函数作为控件的回调函数？
 
 	protected:
-		HWND m_hWnd;
+		HWND m_hWnd;            //注册的窗体的句柄
 		WNDPROC m_OldWndProc;
 		bool m_bSubclassed;
 	};

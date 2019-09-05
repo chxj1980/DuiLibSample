@@ -14,6 +14,8 @@ void CDuiFrameWnd::Notify(DuiLib::TNotifyUI & msg)
 			MessageBox(NULL, _T("woshianniu"), _T("dianjileanniu"), NULL);
 		}
 	}
+
+	//事件类型、控件ID、操作
 }
 
 LRESULT CDuiFrameWnd::HandleMessage(UINT uMsg, WPARAM wParam, LPARAM lParam)
