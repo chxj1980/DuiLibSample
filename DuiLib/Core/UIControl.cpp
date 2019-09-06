@@ -20,8 +20,8 @@ m_pTag(NULL),
 m_dwBackColor(0),
 m_dwBackColor2(0),
 m_dwBackColor3(0),
-m_dwBorderColor(0),      //初始化为黑色边界
-m_dwFocusBorderColor(0), //聚焦时,窗体的边界颜色，初始化为黑色边界
+m_dwBorderColor(0),
+m_dwFocusBorderColor(0),
 m_bColorHSL(false),
 m_nBorderSize(0),
 m_nBorderStyle(PS_SOLID),

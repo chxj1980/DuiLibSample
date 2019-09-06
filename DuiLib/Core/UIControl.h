@@ -194,7 +194,7 @@ namespace DuiLib {
 
 		CDuiString m_sText;		   //***文本，具体看子类怎么用
 		CDuiString m_sToolTip;	   //提示文本
-		TCHAR m_chShortcut;        //好像没什么用。。。
+		TCHAR m_chShortcut;        //
 		CDuiString m_sUserData;	   //用户数据，具体看怎么用，这个变量子类没有使用，当前类中，就设置和读取了一下
 		UINT_PTR m_pTag;		   //依赖于当前控件的一个指针类型的变量，应该类似于C#中的控件的Tag属性
 
