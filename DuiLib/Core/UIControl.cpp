@@ -661,7 +661,7 @@ DWORD CControlUI::GetAdjustColor(DWORD dwColor)
 void CControlUI::Init()
 {
     DoInit();
-    if( OnInit ) OnInit(this);
+    if( OnInit ) OnInit(this);//this as sender of event
 }
 
 void CControlUI::DoInit()

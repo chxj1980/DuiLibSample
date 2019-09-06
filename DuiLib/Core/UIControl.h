@@ -138,8 +138,8 @@ namespace DuiLib {
 		void NeedParentUpdate();
 		DWORD GetAdjustColor(DWORD dwColor);
 
-		virtual void Init();
-		virtual void DoInit();
+		virtual void Init();  //预定义的初始化流程：先执行默认初始化，然后执行初始化委托，
+		virtual void DoInit();//默认初始化
 
 		virtual void Event(TEventUI& event);
 		virtual void DoEvent(TEventUI& event);
@@ -163,7 +163,7 @@ namespace DuiLib {
 		CDuiString GetVirtualWnd() const;
 
 	public:
-		CEventSource OnInit;
+		CEventSource OnInit;   //控件的初始化事件
 		CEventSource OnDestroy;
 		CEventSource OnSize;
 		CEventSource OnEvent;

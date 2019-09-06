@@ -16,12 +16,12 @@ namespace DuiLib {
         virtual ~CDelegateBase();
         bool Equals(const CDelegateBase& rhs) const;
         bool operator() (void* param);
-        virtual CDelegateBase* Copy() const = 0; // add const for gcc
+        virtual CDelegateBase* Copy() const = 0;    // add const for gcc ??
 
     protected:
         void* GetFn();
         void* GetObject();
-        virtual bool Invoke(void* param) = 0;
+        virtual bool Invoke(void* param) = 0;       //子类实现
 
     private:
         void* m_pObject;
@@ -97,11 +97,11 @@ namespace DuiLib {
     public:
         ~CEventSource();
         operator bool();
-        void operator+= (const CDelegateBase& d); // add const for gcc
-        void operator+= (FnType pFn);
-        void operator-= (const CDelegateBase& d);
-        void operator-= (FnType pFn);
-        bool operator() (void* param);
+        void operator+= (const CDelegateBase& d);//重载没有意义，消费者代码并不能实例化CDelegateBase类型的对象		 add const for gcc
+        void operator+= (FnType pFn);			 //增加委托
+        void operator-= (const CDelegateBase& d);//重载没有意义，消费者代码并不能实例化CDelegateBase类型的对象
+        void operator-= (FnType pFn);			 //减少委托
+        bool operator() (void* param);           //根据参数调用所有委托
 
     protected:
         CStdPtrArray m_aDelegates;
