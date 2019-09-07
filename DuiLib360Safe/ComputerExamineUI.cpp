@@ -1,4 +1,6 @@
 
+#include <tchar.h>
+#include "./core/UIDlgBuilder.h"
 #include "ComputerExamineUI.h"
 
 ComputerExamineUI::ComputerExamineUI()

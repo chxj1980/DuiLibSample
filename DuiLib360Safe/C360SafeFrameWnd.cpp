@@ -1,4 +1,8 @@
 
+#include <windowsx.h>
+#include <tchar.h>
+#include "./core/UIDefine.h"
+#include "./layout/UITabLayout.h"
 #include "C360SafeFrameWnd.h"
 #include "CDialogBuilderCallbackEx.h"
 

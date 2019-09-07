@@ -1,4 +1,5 @@
 
+#include <tchar.h>
 #include "CDialogBuilderCallbackEx.h"
 #include "ComputerExamineUI.h"
 

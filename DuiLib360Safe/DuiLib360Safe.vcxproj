@@ -78,18 +78,17 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)_INCLUDE;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_WINDOWS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
-      <AdditionalLibraryDirectories>$(SolutionDir)_LIB;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>DuiLib_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy $(SolutionDir)_DLL\DuiLib_d.dll /Y /V /E $(TargetDir)
-xcopy $(ProjectDir)_SRC\* /Y /V /E $(TargetDir)</Command>
+      <Command>xcopy $(ProjectDir)_SRC\* /Y /V /E $(TargetDir)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -137,12 +136,82 @@ xcopy $(ProjectDir)_SRC\* /Y /V /E $(TargetDir)</Command>
     <ClCompile Include="C360SafeFrameWnd.cpp" />
     <ClCompile Include="CDialogBuilderCallbackEx.cpp" />
     <ClCompile Include="ComputerExamineUI.cpp" />
+    <ClCompile Include="control\UIActiveX.cpp" />
+    <ClCompile Include="control\UIButton.cpp" />
+    <ClCompile Include="control\UICheckBox.cpp" />
+    <ClCompile Include="control\UICombo.cpp" />
+    <ClCompile Include="control\UIComboBox.cpp" />
+    <ClCompile Include="control\UIDateTime.cpp" />
+    <ClCompile Include="control\UIEdit.cpp" />
+    <ClCompile Include="control\UILabel.cpp" />
+    <ClCompile Include="control\UIList.cpp" />
+    <ClCompile Include="control\UIOption.cpp" />
+    <ClCompile Include="control\UIProgress.cpp" />
+    <ClCompile Include="control\UIRichEdit.cpp" />
+    <ClCompile Include="control\UIScrollBar.cpp" />
+    <ClCompile Include="control\UISlider.cpp" />
+    <ClCompile Include="control\UIText.cpp" />
+    <ClCompile Include="control\UITreeView.cpp" />
+    <ClCompile Include="control\UIWebBrowser.cpp" />
+    <ClCompile Include="core\UIBase.cpp" />
+    <ClCompile Include="core\UIContainer.cpp" />
+    <ClCompile Include="core\UIControl.cpp" />
+    <ClCompile Include="core\UIDlgBuilder.cpp" />
+    <ClCompile Include="core\UIManager.cpp" />
+    <ClCompile Include="core\UIMarkup.cpp" />
+    <ClCompile Include="core\UIRender.cpp" />
+    <ClCompile Include="layout\UIChildLayout.cpp" />
+    <ClCompile Include="layout\UIHorizontalLayout.cpp" />
+    <ClCompile Include="layout\UITabLayout.cpp" />
+    <ClCompile Include="layout\UITileLayout.cpp" />
+    <ClCompile Include="layout\UIVerticalLayout.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="utils\stb_image.c" />
+    <ClCompile Include="utils\UIDelegate.cpp" />
+    <ClCompile Include="utils\Utils.cpp" />
+    <ClCompile Include="utils\WinImplBase.cpp" />
+    <ClCompile Include="utils\XUnzip.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="C360SafeFrameWnd.h" />
     <ClInclude Include="CDialogBuilderCallbackEx.h" />
     <ClInclude Include="ComputerExamineUI.h" />
+    <ClInclude Include="control\UIActiveX.h" />
+    <ClInclude Include="control\UIButton.h" />
+    <ClInclude Include="control\UICheckBox.h" />
+    <ClInclude Include="control\UICombo.h" />
+    <ClInclude Include="control\UIComboBox.h" />
+    <ClInclude Include="control\UIDateTime.h" />
+    <ClInclude Include="control\UIEdit.h" />
+    <ClInclude Include="control\UILabel.h" />
+    <ClInclude Include="control\UIList.h" />
+    <ClInclude Include="control\UIOption.h" />
+    <ClInclude Include="control\UIProgress.h" />
+    <ClInclude Include="control\UIRichEdit.h" />
+    <ClInclude Include="control\UIScrollBar.h" />
+    <ClInclude Include="control\UISlider.h" />
+    <ClInclude Include="control\UIText.h" />
+    <ClInclude Include="control\UITreeView.h" />
+    <ClInclude Include="control\UIWebBrowser.h" />
+    <ClInclude Include="core\UIBase.h" />
+    <ClInclude Include="core\UIContainer.h" />
+    <ClInclude Include="core\UIControl.h" />
+    <ClInclude Include="core\UIDefine.h" />
+    <ClInclude Include="core\UIDlgBuilder.h" />
+    <ClInclude Include="core\UIManager.h" />
+    <ClInclude Include="core\UIMarkup.h" />
+    <ClInclude Include="core\UIRender.h" />
+    <ClInclude Include="layout\UIChildLayout.h" />
+    <ClInclude Include="layout\UIHorizontalLayout.h" />
+    <ClInclude Include="layout\UITabLayout.h" />
+    <ClInclude Include="layout\UITileLayout.h" />
+    <ClInclude Include="layout\UIVerticalLayout.h" />
+    <ClInclude Include="utils\downloadmgr.h" />
+    <ClInclude Include="utils\FlashEventHandler.h" />
+    <ClInclude Include="utils\UIDelegate.h" />
+    <ClInclude Include="utils\Utils.h" />
+    <ClInclude Include="utils\WebBrowserEventHandler.h" />
+    <ClInclude Include="utils\WinImplBase.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,48 +1,292 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="源文件">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="头文件">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
-    </Filter>
     <Filter Include="资源文件">
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="头文件\class">
-      <UniqueIdentifier>{a4f51c10-6377-4b58-89df-2dc37c34187c}</UniqueIdentifier>
+    <Filter Include="duilib">
+      <UniqueIdentifier>{b86ce75e-9afb-411f-9ee7-ddf76a9addd9}</UniqueIdentifier>
     </Filter>
-    <Filter Include="源文件\class">
-      <UniqueIdentifier>{541c7435-f8fa-43b0-8b42-2c3fc2a0dc7c}</UniqueIdentifier>
+    <Filter Include="duilib\headers">
+      <UniqueIdentifier>{415de2ff-b321-487f-9b28-552775cb2369}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="duilib\sources">
+      <UniqueIdentifier>{fca8dc83-e5c2-4dc9-8a28-926221a8bfb0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="360safe">
+      <UniqueIdentifier>{9a28ebe7-9dc3-4c63-acc2-67a158a78615}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="360safe\headers">
+      <UniqueIdentifier>{0bc85402-9a79-499a-b10f-9c1dc0f401a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="360safe\sources">
+      <UniqueIdentifier>{566f51ad-f2eb-4144-8b85-3f69b0e23c31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="360safe\headers\class">
+      <UniqueIdentifier>{6d87911d-c1fb-47d1-9296-9bedb44fa03d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="360safe\sources\class">
+      <UniqueIdentifier>{82b8b7f6-3494-431d-a17d-582ab51a2a69}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="duilib\headers\control">
+      <UniqueIdentifier>{0183d6fc-c117-4d80-8258-d254aed8a98f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="duilib\headers\core">
+      <UniqueIdentifier>{c32cbc5d-5575-4568-a810-ec04cc52104b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="duilib\headers\layout">
+      <UniqueIdentifier>{bce1f792-5171-482d-a306-035654dc346c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="duilib\headers\utils">
+      <UniqueIdentifier>{914e4804-672c-4cdd-b705-604bb8e79c6c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="duilib\sources\control">
+      <UniqueIdentifier>{6adef1d2-7b54-4b3a-b05d-30644126f9dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="duilib\sources\core">
+      <UniqueIdentifier>{9ccb6db7-3319-41ab-ae85-143dc3b97b80}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="duilib\sources\layout">
+      <UniqueIdentifier>{11623221-e586-4379-b51e-65311ef9e190}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="duilib\sources\utils">
+      <UniqueIdentifier>{41a931fb-e3f4-43d5-a0c6-9bb41b4217cd}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="C360SafeFrameWnd.cpp">
-      <Filter>源文件\class</Filter>
+      <Filter>360safe\sources\class</Filter>
     </ClCompile>
     <ClCompile Include="CDialogBuilderCallbackEx.cpp">
-      <Filter>源文件\class</Filter>
+      <Filter>360safe\sources\class</Filter>
     </ClCompile>
     <ClCompile Include="ComputerExamineUI.cpp">
-      <Filter>源文件\class</Filter>
+      <Filter>360safe\sources\class</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>360safe\sources</Filter>
+    </ClCompile>
+    <ClCompile Include="control\UIActiveX.cpp">
+      <Filter>duilib\sources\control</Filter>
+    </ClCompile>
+    <ClCompile Include="control\UIButton.cpp">
+      <Filter>duilib\sources\control</Filter>
+    </ClCompile>
+    <ClCompile Include="control\UICheckBox.cpp">
+      <Filter>duilib\sources\control</Filter>
+    </ClCompile>
+    <ClCompile Include="control\UICombo.cpp">
+      <Filter>duilib\sources\control</Filter>
+    </ClCompile>
+    <ClCompile Include="control\UIComboBox.cpp">
+      <Filter>duilib\sources\control</Filter>
+    </ClCompile>
+    <ClCompile Include="control\UIDateTime.cpp">
+      <Filter>duilib\sources\control</Filter>
+    </ClCompile>
+    <ClCompile Include="control\UIEdit.cpp">
+      <Filter>duilib\sources\control</Filter>
+    </ClCompile>
+    <ClCompile Include="control\UILabel.cpp">
+      <Filter>duilib\sources\control</Filter>
+    </ClCompile>
+    <ClCompile Include="control\UIList.cpp">
+      <Filter>duilib\sources\control</Filter>
+    </ClCompile>
+    <ClCompile Include="control\UIOption.cpp">
+      <Filter>duilib\sources\control</Filter>
+    </ClCompile>
+    <ClCompile Include="control\UIProgress.cpp">
+      <Filter>duilib\sources\control</Filter>
+    </ClCompile>
+    <ClCompile Include="control\UIRichEdit.cpp">
+      <Filter>duilib\sources\control</Filter>
+    </ClCompile>
+    <ClCompile Include="control\UIScrollBar.cpp">
+      <Filter>duilib\sources\control</Filter>
+    </ClCompile>
+    <ClCompile Include="control\UISlider.cpp">
+      <Filter>duilib\sources\control</Filter>
+    </ClCompile>
+    <ClCompile Include="control\UIText.cpp">
+      <Filter>duilib\sources\control</Filter>
+    </ClCompile>
+    <ClCompile Include="control\UITreeView.cpp">
+      <Filter>duilib\sources\control</Filter>
+    </ClCompile>
+    <ClCompile Include="control\UIWebBrowser.cpp">
+      <Filter>duilib\sources\control</Filter>
+    </ClCompile>
+    <ClCompile Include="core\UIBase.cpp">
+      <Filter>duilib\sources\core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\UIContainer.cpp">
+      <Filter>duilib\sources\core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\UIControl.cpp">
+      <Filter>duilib\sources\core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\UIDlgBuilder.cpp">
+      <Filter>duilib\sources\core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\UIManager.cpp">
+      <Filter>duilib\sources\core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\UIMarkup.cpp">
+      <Filter>duilib\sources\core</Filter>
+    </ClCompile>
+    <ClCompile Include="core\UIRender.cpp">
+      <Filter>duilib\sources\core</Filter>
+    </ClCompile>
+    <ClCompile Include="layout\UIChildLayout.cpp">
+      <Filter>duilib\sources\layout</Filter>
+    </ClCompile>
+    <ClCompile Include="layout\UIHorizontalLayout.cpp">
+      <Filter>duilib\sources\layout</Filter>
+    </ClCompile>
+    <ClCompile Include="layout\UITabLayout.cpp">
+      <Filter>duilib\sources\layout</Filter>
+    </ClCompile>
+    <ClCompile Include="layout\UITileLayout.cpp">
+      <Filter>duilib\sources\layout</Filter>
+    </ClCompile>
+    <ClCompile Include="layout\UIVerticalLayout.cpp">
+      <Filter>duilib\sources\layout</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\stb_image.c">
+      <Filter>duilib\sources\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\UIDelegate.cpp">
+      <Filter>duilib\sources\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\Utils.cpp">
+      <Filter>duilib\sources\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\WinImplBase.cpp">
+      <Filter>duilib\sources\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="utils\XUnzip.cpp">
+      <Filter>duilib\sources\utils</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="C360SafeFrameWnd.h">
-      <Filter>头文件\class</Filter>
+      <Filter>360safe\headers\class</Filter>
     </ClInclude>
     <ClInclude Include="CDialogBuilderCallbackEx.h">
-      <Filter>头文件\class</Filter>
+      <Filter>360safe\headers\class</Filter>
     </ClInclude>
     <ClInclude Include="ComputerExamineUI.h">
-      <Filter>头文件\class</Filter>
+      <Filter>360safe\headers\class</Filter>
+    </ClInclude>
+    <ClInclude Include="control\UIActiveX.h">
+      <Filter>duilib\headers\control</Filter>
+    </ClInclude>
+    <ClInclude Include="control\UIButton.h">
+      <Filter>duilib\headers\control</Filter>
+    </ClInclude>
+    <ClInclude Include="control\UICheckBox.h">
+      <Filter>duilib\headers\control</Filter>
+    </ClInclude>
+    <ClInclude Include="control\UICombo.h">
+      <Filter>duilib\headers\control</Filter>
+    </ClInclude>
+    <ClInclude Include="control\UIComboBox.h">
+      <Filter>duilib\headers\control</Filter>
+    </ClInclude>
+    <ClInclude Include="control\UIDateTime.h">
+      <Filter>duilib\headers\control</Filter>
+    </ClInclude>
+    <ClInclude Include="control\UIEdit.h">
+      <Filter>duilib\headers\control</Filter>
+    </ClInclude>
+    <ClInclude Include="control\UILabel.h">
+      <Filter>duilib\headers\control</Filter>
+    </ClInclude>
+    <ClInclude Include="control\UIList.h">
+      <Filter>duilib\headers\control</Filter>
+    </ClInclude>
+    <ClInclude Include="control\UIOption.h">
+      <Filter>duilib\headers\control</Filter>
+    </ClInclude>
+    <ClInclude Include="control\UIProgress.h">
+      <Filter>duilib\headers\control</Filter>
+    </ClInclude>
+    <ClInclude Include="control\UIRichEdit.h">
+      <Filter>duilib\headers\control</Filter>
+    </ClInclude>
+    <ClInclude Include="control\UIScrollBar.h">
+      <Filter>duilib\headers\control</Filter>
+    </ClInclude>
+    <ClInclude Include="control\UISlider.h">
+      <Filter>duilib\headers\control</Filter>
+    </ClInclude>
+    <ClInclude Include="control\UIText.h">
+      <Filter>duilib\headers\control</Filter>
+    </ClInclude>
+    <ClInclude Include="control\UITreeView.h">
+      <Filter>duilib\headers\control</Filter>
+    </ClInclude>
+    <ClInclude Include="control\UIWebBrowser.h">
+      <Filter>duilib\headers\control</Filter>
+    </ClInclude>
+    <ClInclude Include="core\UIBase.h">
+      <Filter>duilib\headers\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\UIContainer.h">
+      <Filter>duilib\headers\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\UIControl.h">
+      <Filter>duilib\headers\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\UIDefine.h">
+      <Filter>duilib\headers\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\UIDlgBuilder.h">
+      <Filter>duilib\headers\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\UIManager.h">
+      <Filter>duilib\headers\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\UIMarkup.h">
+      <Filter>duilib\headers\core</Filter>
+    </ClInclude>
+    <ClInclude Include="core\UIRender.h">
+      <Filter>duilib\headers\core</Filter>
+    </ClInclude>
+    <ClInclude Include="layout\UIChildLayout.h">
+      <Filter>duilib\headers\layout</Filter>
+    </ClInclude>
+    <ClInclude Include="layout\UIHorizontalLayout.h">
+      <Filter>duilib\headers\layout</Filter>
+    </ClInclude>
+    <ClInclude Include="layout\UITabLayout.h">
+      <Filter>duilib\headers\layout</Filter>
+    </ClInclude>
+    <ClInclude Include="layout\UITileLayout.h">
+      <Filter>duilib\headers\layout</Filter>
+    </ClInclude>
+    <ClInclude Include="layout\UIVerticalLayout.h">
+      <Filter>duilib\headers\layout</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\downloadmgr.h">
+      <Filter>duilib\headers\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\FlashEventHandler.h">
+      <Filter>duilib\headers\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\UIDelegate.h">
+      <Filter>duilib\headers\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\WebBrowserEventHandler.h">
+      <Filter>duilib\headers\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\WinImplBase.h">
+      <Filter>duilib\headers\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="utils\Utils.h">
+      <Filter>duilib\headers\utils</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

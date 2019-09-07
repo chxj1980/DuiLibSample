@@ -1,9 +1,6 @@
 
 #include <cstdlib>
-
 #include <Windows.h>
-
-#include <UIlib.h>
 
 #include "C360SafeFrameWnd.h"
 

@@ -1,5 +1,5 @@
 
-#include <UIlib.h>
+#include "./core/UIDlgBuilder.h"
 
 class CDialogBuilderCallbackEx : public DuiLib::IDialogBuilderCallback
 {

@@ -1,5 +1,7 @@
 
-#include <UIlib.h>
+#include "./core/UIBase.h"
+#include "./core/UIManager.h"
+#include "./control/UIButton.h"
 
 #pragma once
 class C360SafeFrameWnd : public DuiLib::CWindowWnd, public DuiLib::INotifyUI
